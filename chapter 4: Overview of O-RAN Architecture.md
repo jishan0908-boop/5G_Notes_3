@@ -17,7 +17,10 @@
 *  Non-Realtime RIC(NON-RT RIC): It is inside the SMO , it is responsbile for making the policies for the controlling and optimizing RAN functions , these policies are be derived form expert knowledge or may be derived form the AI/ML on the KPIS that have been collected in the SMO . This RIC sends the policies inform the A1 interface to the Near Real Time RIC.
 *  Near Real Time RIC (nRT RIC): It has the policies also , it get the feedbacks form the O-RAN nodes using the E2 interface , using the poloices and feedbacks , send the Directives to these nodes by the E2 interface inorder to controlling and optimizing RAN functions, these E2 is also used to collect the Fine Grain or the real time KPIS from the O-RAN network 
 (Pics)
-* Then we have the 3rd party apps that are used to managed the O-RAN functions there are 
+* Then we have the 3rd party apps that are used to managed the O-RAN functions there are two such apps , rApp which works on the Non-Realtime RIC they work independently because of the open interface b/w apps and Non-Realtime RIC .
+* Then we have the xApps, they are deployed on the Near Real Time RIC and using the open interface b/w the Near Real Time RIC and xapp they communicate one another .
+
+  
 
 
 
