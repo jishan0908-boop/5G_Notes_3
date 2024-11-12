@@ -20,8 +20,27 @@
 * Then we have the 3rd party apps that are used to managed the O-RAN functions there are two such apps , rApp which works on the Non-Realtime RIC they work independently because of the open interface b/w apps and Non-Realtime RIC .
 * Then we have the xApps, they are deployed on the Near Real Time RIC and using the open interface b/w the Near Real Time RIC and xapp they communicate one another .
 
-  
+## Options For Aggregation of O-RAN Nodes :
+(pisc)
+(pics2)
+(pices3)
 
+## O-RAN Control Loops :
+(PICS)
+ * These loops operates at the three level , first we have real time loops that operates at the level of nodes and these loops must execute within 10ms due to the real time nature of loops .
+(PICS)
+ * Then we have the near real time loops these loops can execute b/w 10-100ms .
+ * Then we have the non real time loops , these loops can execute greater than 1s .
+ * According to the O-RAN specification these real time loops execute within 10ms , while the execution time of other two loops depends upon specific use case for which these loops are being loops
+ * These loops are based upon the action feedbacks like if the basestation is using the beamforming and it is steering the beams in the particular direction so this basestaion performs connection and then it gets the feedbacks analytics baseupon it this base station modifies its action .
+ * All these loops run parallel to one-another or these loops may or may not interact with each depending upon the use case .
+
+## Major Entities in O-RAN Ecosystems :
+(pics)
+* The O-RAN Alliances considers those specificsation to the baseline specification , and O-RAN Aalliance build upon those specification inorder to define the Architecture and Specification or O-RAN .
+* Then we have the O-RAN Software Community , which is working under the Linux Foundation and it works with the collaboration of O-RAN Alliances and it is involve in the refernence design for whole O-RAN software
+* Then we have Software Defined (SD) - RAN , this project is under the Open Networking Foundation , as apart of this project there is a project micor-ONOS-RIC , in this project and  open source RIC example platform being develop .
+* Then we have the Telecom Infra Project which is founded by the facebook , and it takes the micor-ONOS-RIC platform and it test different xAPP on that platform and this project is also invole in the implementation of the RAN on the COTS hardware 
 
 
 
