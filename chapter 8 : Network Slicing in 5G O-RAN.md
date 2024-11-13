@@ -1,1 +1,41 @@
+## What is Network Slics? 
+()
+* Like we have a Physical 5G Network and on this network we can have many logical network and these logical network are called Network Slice . Each of these slices are the seprate network in itself that has all the necessary resources , they are isolated with each other but may share there resources with each other , the user is using the slice services it  will experience that it is using a complete separate network , the resource use in the slice can may be increase/decrease on the demands. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
