@@ -58,7 +58,17 @@ And in the context of Network Slicing there are two important function :
 1. Active and Available Inventory(A& AI) which is a database of all the available resources and the services that are there in the network and the relation b/w those services and resources .
 2. Services Orchestrator (SO) is used for the automation of the end-to-end services and instance provisioning of these services . 
 
-
+## Network Slice Instance Creation Procedure Using ONAP based Network Slicing :
+()
+1. The User fill a form on the communication service management function portal for the creation of new network slice and user also gives the requirement of the slice . The CSMF portal send these requirement to the CSMF which is the part of the Service Orchestrator .
+2. Then in the next step it converts the customers requirement to the network slice requirement like  Network Type ,Network Capacity ,QoS requirements for this slice and the CSMF also save the copy of this requirements in the active and available Inventory it also invokes the optimization Framework to provide a suitable Network Slice Template , against these requirement they provide a sutable NST to CMSF .
+3. Now in the next step the CSMF triggers NSMF inorder to provide a suitable Network Slice Instance aganist the network slice template . The NSMF triggers the Optimzie Framework for the provision of this NSI .
+4. Then the OOF checks the AAI about the available NSI and if those NSI are share able and if such a NSI is available and shareable then OOF returns that NSI to the NSMF .
+5. However if such NSI does not existed then in that case the OOF will return the profile of different RAN , Core and Transport Network . Network Slice Subnet Instances that can be used to create a New NSI .
+6. Now the information about this selection is shared by the NSMF with the NSMF Portal using the portal the operator check the selection is made by the NSMF and it can do any modification if they are required .
+7. In the next step NSMF triggers NSSMF for the RAN , Core , TN inorder to allocate and update the corresponding NSSIs that can be use for creation of the require NSI .
+8. These NSSMF trigger the OOF for the provision of these NSSI .
+9. In the Next step OOF checks with the A&AI about the availaletiy of the suitable NSSI which are shareable, if they exists then they are return to the NSSMF . Using these NSSI the NSSMF create the corresponding network sub slice instances for the creation of the network slice Instance.   
 
 
 
