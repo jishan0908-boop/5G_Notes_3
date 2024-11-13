@@ -42,10 +42,28 @@
 
 
  ## Near Real Time RIC:
- 
+(pics)
+* The Near RT-RIC is used for the control/optimization of the RAN radio resources , like we can do Adimission control , Mobility management and the Interfereence Management etc.
+* Ex of the Adimission Control : like there is UE which is in the coverage area of the O-RU base station, and UE want to use the data services of this base station , using the Admission control, we can resitrict the base staion , to provide a certain type of data services to this UE . For the other data services the UE may need to connect to other base station .
+* ex of the Mobility Management : if the UEs are at the edge of a cell , and also there is load in this cell , by using the mobility management we can modify the handover parameters of this cell in such away that these UE , make handover to the other base station , this way we do load balancing in these cell .
+* Ex of interface management :it mean that we can adjust the transmitting power or the beamforming of these base station in such a way that there is min interference b/w these base station .
+* These Radio resource Functionality are inn the xAPPs, and these apps may be provided by the third party , these xapps may be based upon the microservices based architecture , these apps may use the AI/ML trained model and these apps use it to control and optimize the RAN fxns or the radio resources.
+(pics)
+* Messaging infrastructure , it is used for the communication b/w the xAPPs, and b/w the xAPPs and other functional blocks .
+* Then we have the secuirty block , which provide the security to the xAPPs and to handle the security relate fxns to the xAPPs .
+* Then we have the Conflict Mitigation block , it is possbile that two xAPPs can proceduce conflicting request , so these conflicts are resolved by the Conflict Mitigation block .
+* Then we have the XAPP Subscription Management , these xapps need to register to the nearRT-RIC so they are register with the XAPP Subscription block , and it also used to provide Unified Data distribution to these apps .
+* Now we also have the Database in the near-RT-RIC this database stores the data of the E2 Nodes also data of the xAPPs are stored in this database , and the Shared Data Layer is the interface b/w the database .
+* Then we have the Management Services , which is used for the configuration , fault and performance management of the Near-RT-RIC block , these services are also used for the Life-Cycle management of xApps , if we want to debug error in these xapps then we logs , traces and the metrics collection for these xAPP, and store in the database.
 
- 
+## Centralized and Distributed Near-RT RIC :
+### Centralized Near RT-RIC :
+(pics)
+* There are Multiple fxns are connceted to these Near-RT RIC with the help of E2 interface , also it collects the data from all these E2 nodes in the form of Key Perfromance Indicator and based upon these KPIS for different cells the near-RT-RIC takes the action to optimize the perfromance of these cell together .
 
+### Distributed Near-RT RIC 
+(pics)
+* In this case we can see that One Near-RT-RIC is control one E2 node , these Near realtime RIC consist of one or more Logical Near-RT-RIC that are virtulaized on the same server . 
 
 
 
