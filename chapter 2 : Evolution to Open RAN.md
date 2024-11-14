@@ -1,7 +1,7 @@
 # Traditional Basestation Architecture :
 ## Traditional Basestation :
 * This Traditional Basestation was first introduce in 2G , then in 3G and in the earlier part of the 4G depolyment , the core network is connected to the base station ,where we have a cabinate where inside it we have the Baseband Unit and the Radio Unit , suppose if the core network is sending data to the base station , the data is not modulated , so we call the data as the baseband signal, so first this signal is process by the baseband unit , and it process it and it give it to radio unit it modulate the baseband signal to carrier band , then it sends it to the antenna through RF-cable , there was a porblem in RF cable that there is the significant powerloss in it .
-(add pics)
+
 
  ## Evolution to the Contemporary Basestation:
  
